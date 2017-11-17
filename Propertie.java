@@ -2,16 +2,15 @@ import java.util.*;
 import java.io.*;
 
 /**
- * This class is the structura for one property.
+ * The propertie class is the class that represents all the properties and their values that have been detected in the text.
  *
  * @author (Paul JEAN)
  * @version (0.1)
  */
 public class Propertie
 {
-    // instance variables - replace the example below with your own
     private String value;
-    private ArrayList<String> listOfValues;
+    private ArrayList<String> listOfValues; // List of all the values associated to each properties
     private String name; 
     /**
      * Constructor for objects of class Propertie
