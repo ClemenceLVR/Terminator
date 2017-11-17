@@ -7,7 +7,7 @@ import java.io.*;
  * @author (Paul JEAN)
  * @version (0.1)
  */
-public abstract class Propertie
+public class Propertie
 {
     // instance variables - replace the example below with your own
     private String value;
@@ -30,7 +30,7 @@ public abstract class Propertie
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void setListOfValues()
+    public void setList( ArrayList myList)
     {
        Scanner sc = new Scanner(System.in);
        Scanner sv = new Scanner (System.in);
@@ -39,7 +39,7 @@ public abstract class Propertie
        while (b==false){
          System.out.println("Type a potential value");  
          String value = sc.nextLine();
-         listOfValues.add(value);
+         myList.add(value);
          System.out.println("vous avez saisi : "+value);
          System.out.println("Would you like to continue the type ?(Y/N)");
          String result= sv.nextLine();
@@ -57,6 +57,9 @@ public abstract class Propertie
        
        
        } 
+    public void setListOfValue(){
+    setList(listOfValues);
+    }
     public void displayList(){ 
        for (int i=0; i < listOfValues.size();i++){
            String s = listOfValues.get(i);
@@ -74,6 +77,6 @@ public abstract class Propertie
     public void setValue (String newValue){
     value=newValue;
     }
-    public abstract void researchValue (String text);
+    //public void researchValue (String text);
     }
 
