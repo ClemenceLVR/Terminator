@@ -52,30 +52,36 @@ public class Propertie
             break;
             default:
             System.out.println("mauvaise saisie de choix recommencez");}
-        }
+       }
        
        
        } 
     public void setListOfValue(){
     setList(listOfValues);
     }
+    
     public void displayList(){ 
        for (int i=0; i < listOfValues.size();i++){
            String s = listOfValues.get(i);
            System.out.println(s);}
-        }
+    }
+    
     public String getName(){
         return name;
     }
+    
     public ArrayList getListOfValues(){
     return listOfValues;
     }
+    
     public String getValue (){
     return value;
     }
+    
     public void setValue (String newValue){
     value=newValue;
     }
+    
     //public void researchValue (String text);
     }
 

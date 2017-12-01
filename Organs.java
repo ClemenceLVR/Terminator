@@ -19,14 +19,17 @@ public abstract class Organs
         name = newName;
         listOfOrgans = new ArrayList<String>();
     }
+    
     public void setListOfOrgans()
     {
         listOfOrgans.add(name);
     }
+    
     public String getName()
     {
         return name;
     }
+    
     public ArrayList getListOfOrgans()
     {
         return listOfOrgans;
