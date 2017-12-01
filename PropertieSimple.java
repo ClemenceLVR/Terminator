@@ -5,7 +5,7 @@
  * @author (Paul JEAN)
  * @version (V0.1)
  */
-public class PropertieSimple extends Propertie
+public class PropertieSimple extends Properties
 {
     // instance variables - replace the example below with your own
 

@@ -7,7 +7,7 @@ import java.io.*;
  * @author (Paul JEAN)
  * @version (0.1)
  */
-public class Propertie
+public class Properties
 {
     private String value;
     private ArrayList<String> listOfValues; // List of all the values associated to each properties
@@ -15,7 +15,7 @@ public class Propertie
     /**
      * Constructor for objects of class Propertie
      */
-    public Propertie(String newName)
+    public Properties(String newName)
     {
         name = newName; 
         listOfValues= new ArrayList<String>();

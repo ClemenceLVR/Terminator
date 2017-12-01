@@ -10,7 +10,7 @@ import java.io.*;
 public class ListOfPropertie
 {
     private static ArrayList<String> possibleProperties;
-    private ArrayList<Propertie> foundedProperties; 
+    private ArrayList<Properties> foundedProperties; 
     private String name;
     
     /**
@@ -19,7 +19,7 @@ public class ListOfPropertie
     public ListOfPropertie(String newName)
     {
         name= newName;
-        foundedProperties= new ArrayList<Propertie>();
+        foundedProperties= new ArrayList<Properties>();
     }
 
     /**

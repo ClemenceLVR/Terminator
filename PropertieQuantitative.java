@@ -7,7 +7,7 @@ import java.io.*;
  * @author (Paul JEAN)
  * @version (0.1)
  */
-public class PropertieQuantitative extends Propertie
+public class PropertieQuantitative extends Properties
 {
     // instance variables - replace the example below with your own
     private static ArrayList<String> listOfProp;
