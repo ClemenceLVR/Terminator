@@ -2,10 +2,11 @@
 """
 Created on Mon Jan 29 15:35:11 2018
 
-@author: cleme
+@author: clemence
 """
 
 import xlrd
+import pickle
 
 ########## Import de fichiers excel sous forme de dictionnaires ###########
 
@@ -42,7 +43,24 @@ def import_dico(nomDoc,nomSheet):
                     dico[key].append(value)
                     # sinon on ajoute la valeur à la liste de valeurs de la clé
     
-    print(dico)
-    ## ATTENTION IL FAUT QUE LE DICTIONNAIRE SOIT STOCKE DANS UN FICHIER !!
+    return(dico)
+    
+########## Enregistrement et lecture du fichier contenant le dico ###########
+    
+def register(dico,fileName):
+    # record the dictionnary in a file
+    with open(fileName,'wb') as theFile: 
+        myPickler = pickle.Pickler(theFile) # indicate in which file we will work 
+        myPickler.dump(dico) # write in the dictionnary
+        
+def opening(fileName):
+    # open the file and read it
+    with open(fileName,'rb') as theFile:
+        myDepickler = pickle.Unpickler(theFile)
+        dictionnary = myDepickler.load()
+    return(dictionnary)
 
-import_synonyms('Props_Vals_Syno.xlsx',u'Syno')
+
+dico = import_dico('Fichier_Dictionnaire.xlsx',u'Values_Synonyms')
+register(dico,'Values_Synonyms')
+#print(opening('StandardValues'))
