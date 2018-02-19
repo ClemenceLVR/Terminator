@@ -60,7 +60,16 @@ def opening(fileName):
         dictionnary = myDepickler.load()
     return(dictionnary)
 
+########## Enregistrement et lecture du fichier contenant le dico ###########
 
+def add_Organ(word,dico):
+    for key, value in dico: 
+        if word not in dico: 
+            dico[key] = word
+            
+
+##############################################################################################
+            
 dico = import_dico('Fichier_Dictionnaire.xlsx',u'Values_Synonyms')
 register(dico,'Values_Synonyms')
 #print(opening('StandardValues'))
